@@ -69,10 +69,10 @@ public class Client {
       // ...
       byte[] sessionKey = RSADecrypter.doFinal(Server.getMessage(input));
       SecretKey aesKey = new SecretKeySpec( sessionKey, "AES" );
-      Cipher AESEncrypter = Cipher.getInstance("AES/ECB/PKCS5Padding");
+      Cipher AESEncrypter = Cipher.getInstance("AES/CBC/PKCS5Padding");
       AESEncrypter.init(Cipher.ENCRYPT_MODE, aesKey);
 
-      Cipher AESDecrypter = Cipher.getInstance("AES/ECB/PKCS5Padding");
+      Cipher AESDecrypter = Cipher.getInstance("AES/CBC/PKCS5Padding");
       AESDecrypter.init(Cipher.DECRYPT_MODE, aesKey);
       // Read commands from the user and print server responses.
       String request = "";
