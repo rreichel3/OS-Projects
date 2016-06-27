@@ -1,0 +1,12 @@
+hammock 5123 8821
+violin 3711 4800 5266
+door
+cat 8821
+scissors 4800 5266 8725 8821
+mug 2034
+marker 7547 8452
+spatula 5266
+painting 991 1563 5123 8452
+ladle 5123
+keyboard 2034
+electron 8821
